@@ -15,17 +15,16 @@ const App = () => {
     const fetchCustomers = async () => {
       try {
         const response = await axios.get('https://customer-rest-service-frontend-personaltrainer.2.rahtiapp.fi/api/getcustomers');
-        setCustomers(response.data); // Oletetaan, että data on asiakaslista
+        setCustomers(response.data); 
       } catch (error) {
         console.error('Asiakkaiden haku epäonnistui:', error);
       }
     };
 
-    // Haetaan harjoitustiedot API:sta
     const fetchTrainings = async () => {
       try {
         const response = await axios.get('https://customer-rest-service-frontend-personaltrainer.2.rahtiapp.fi/api/gettrainings');
-        setTrainings(response.data); // Oletetaan, että data on harjoituslista
+        setTrainings(response.data); 
       } catch (error) {
         console.error('Harjoitusten haku epäonnistui:', error);
       }
@@ -33,7 +32,7 @@ const App = () => {
 
     fetchCustomers();
     fetchTrainings();
-  }, []); // Tämä effecti ajetaan vain komponentin ensimmäisellä renderöinnillä
+  }, []);
 
   return (
     <Router>
