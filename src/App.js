@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import CustomerList from './CustomerList'; // Asiakaslistakomponentti
 import TrainingList from './TrainingList'; // Harjoitusten listakomponentti
 import TrainingCalendar from './TrainingCalendar'; // Kalenterikomponentti
